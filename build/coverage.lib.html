@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-verror/verror/lib/verror.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-verror/node_modules/verror/lib/verror.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-verror">npmtest-verror (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-verror/verror/lib/verror.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-verror/node_modules/verror/lib/verror.js</span></h1>
     <h2>
         
         Statements: <span class="metric">20.65% <small>(32 / 155)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-verror/verror/lib/</a> » verror.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-verror/node_modules/verror/lib/</a> &#187; verror.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -1104,36 +1106,36 @@ VError.MultiError = MultiError;
  *    shortmessage      result of sprintf(sprintf_args), taking options.strict
  *    			into account as described in README.md.
  */
-<span class="fstat-no" title="function not covered">function parseConstructorArguments(args)</span>
+<span class="fstat-no" title="function not covered" >function parseConstructorArguments(args)</span>
 {
-<span class="cstat-no" title="statement not covered">	var argv, options, sprintf_args, shortmessage, k;</span>
+<span class="cstat-no" title="statement not covered" >	var argv, options, sprintf_args, shortmessage, k;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	mod_assertplus.object(args, 'args');</span>
-<span class="cstat-no" title="statement not covered">	mod_assertplus.bool(args.strict, 'args.strict');</span>
-<span class="cstat-no" title="statement not covered">	mod_assertplus.array(args.argv, 'args.argv');</span>
-<span class="cstat-no" title="statement not covered">	argv = args.argv;</span>
+<span class="cstat-no" title="statement not covered" >	mod_assertplus.object(args, 'args');</span>
+<span class="cstat-no" title="statement not covered" >	mod_assertplus.bool(args.strict, 'args.strict');</span>
+<span class="cstat-no" title="statement not covered" >	mod_assertplus.array(args.argv, 'args.argv');</span>
+<span class="cstat-no" title="statement not covered" >	argv = args.argv;</span>
 &nbsp;
 	/*
 	 * First, figure out which form of invocation we've been given.
 	 */
-<span class="cstat-no" title="statement not covered">	if (argv.length === 0) {</span>
-<span class="cstat-no" title="statement not covered">		options = {};</span>
-<span class="cstat-no" title="statement not covered">		sprintf_args = [];</span>
-	} else <span class="cstat-no" title="statement not covered">if (mod_isError(argv[0])) {</span>
-<span class="cstat-no" title="statement not covered">		options = { 'cause': argv[0] };</span>
-<span class="cstat-no" title="statement not covered">		sprintf_args = argv.slice(1);</span>
-	} else <span class="cstat-no" title="statement not covered">if (typeof (argv[0]) === 'object') {</span>
-<span class="cstat-no" title="statement not covered">		options = {};</span>
-<span class="cstat-no" title="statement not covered">		for (k in argv[0]) {</span>
-<span class="cstat-no" title="statement not covered">			options[k] = argv[0][k];</span>
+<span class="cstat-no" title="statement not covered" >	if (argv.length === 0) {</span>
+<span class="cstat-no" title="statement not covered" >		options = {};</span>
+<span class="cstat-no" title="statement not covered" >		sprintf_args = [];</span>
+	} else <span class="cstat-no" title="statement not covered" >if (mod_isError(argv[0])) {</span>
+<span class="cstat-no" title="statement not covered" >		options = { 'cause': argv[0] };</span>
+<span class="cstat-no" title="statement not covered" >		sprintf_args = argv.slice(1);</span>
+	} else <span class="cstat-no" title="statement not covered" >if (typeof (argv[0]) === 'object') {</span>
+<span class="cstat-no" title="statement not covered" >		options = {};</span>
+<span class="cstat-no" title="statement not covered" >		for (k in argv[0]) {</span>
+<span class="cstat-no" title="statement not covered" >			options[k] = argv[0][k];</span>
 		}
-<span class="cstat-no" title="statement not covered">		sprintf_args = argv.slice(1);</span>
+<span class="cstat-no" title="statement not covered" >		sprintf_args = argv.slice(1);</span>
 	} else {
-<span class="cstat-no" title="statement not covered">		mod_assertplus.string(argv[0],</span>
+<span class="cstat-no" title="statement not covered" >		mod_assertplus.string(argv[0],</span>
 		    'first argument to VError, SError, or WError ' +
 		    'constructor must be a string, object, or Error');
-<span class="cstat-no" title="statement not covered">		options = {};</span>
-<span class="cstat-no" title="statement not covered">		sprintf_args = argv;</span>
+<span class="cstat-no" title="statement not covered" >		options = {};</span>
+<span class="cstat-no" title="statement not covered" >		sprintf_args = argv;</span>
 	}
 &nbsp;
 	/*
@@ -1162,21 +1164,21 @@ VError.MultiError = MultiError;
 	 * desiring the strict behavior can use the SError class or pass the
 	 * "strict" option to the VError constructor.
 	 */
-<span class="cstat-no" title="statement not covered">	mod_assertplus.object(options);</span>
-<span class="cstat-no" title="statement not covered">	if (!options.strict &amp;&amp; !args.strict) {</span>
-<span class="cstat-no" title="statement not covered">		sprintf_args = sprintf_args.map(<span class="fstat-no" title="function not covered">function (a) {</span></span>
-<span class="cstat-no" title="statement not covered">			return (a === null ? 'null' :</span>
+<span class="cstat-no" title="statement not covered" >	mod_assertplus.object(options);</span>
+<span class="cstat-no" title="statement not covered" >	if (!options.strict &amp;&amp; !args.strict) {</span>
+<span class="cstat-no" title="statement not covered" >		sprintf_args = sprintf_args.map(<span class="fstat-no" title="function not covered" >function (a) {</span></span>
+<span class="cstat-no" title="statement not covered" >			return (a === null ? 'null' :</span>
 			    a === undefined ? 'undefined' : a);
 		});
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered">	if (sprintf_args.length === 0) {</span>
-<span class="cstat-no" title="statement not covered">		shortmessage = '';</span>
+<span class="cstat-no" title="statement not covered" >	if (sprintf_args.length === 0) {</span>
+<span class="cstat-no" title="statement not covered" >		shortmessage = '';</span>
 	} else {
-<span class="cstat-no" title="statement not covered">		shortmessage = sprintf.apply(null, sprintf_args);</span>
+<span class="cstat-no" title="statement not covered" >		shortmessage = sprintf.apply(null, sprintf_args);</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered">	return ({</span>
+<span class="cstat-no" title="statement not covered" >	return ({</span>
 	    'options': options,
 	    'shortmessage': shortmessage
 	});
@@ -1185,28 +1187,28 @@ VError.MultiError = MultiError;
 /*
  * See README.md for reference documentation.
  */
-<span class="fstat-no" title="function not covered">function VError()</span>
+<span class="fstat-no" title="function not covered" >function VError()</span>
 {
-<span class="cstat-no" title="statement not covered">	var args, obj, parsed, cause, ctor, message, k;</span>
+<span class="cstat-no" title="statement not covered" >	var args, obj, parsed, cause, ctor, message, k;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	args = Array.prototype.slice.call(arguments, 0);</span>
+<span class="cstat-no" title="statement not covered" >	args = Array.prototype.slice.call(arguments, 0);</span>
 &nbsp;
 	/*
 	 * This is a regrettable pattern, but JavaScript's built-in Error class
 	 * is defined to work this way, so we allow the constructor to be called
 	 * without "new".
 	 */
-<span class="cstat-no" title="statement not covered">	if (!(this instanceof VError)) {</span>
-<span class="cstat-no" title="statement not covered">		obj = Object.create(VError.prototype);</span>
-<span class="cstat-no" title="statement not covered">		VError.apply(obj, arguments);</span>
-<span class="cstat-no" title="statement not covered">		return (obj);</span>
+<span class="cstat-no" title="statement not covered" >	if (!(this instanceof VError)) {</span>
+<span class="cstat-no" title="statement not covered" >		obj = Object.create(VError.prototype);</span>
+<span class="cstat-no" title="statement not covered" >		VError.apply(obj, arguments);</span>
+<span class="cstat-no" title="statement not covered" >		return (obj);</span>
 	}
 &nbsp;
 	/*
 	 * For convenience and backwards compatibility, we support several
 	 * different calling forms.  Normalize them here.
 	 */
-<span class="cstat-no" title="statement not covered">	parsed = parseConstructorArguments({</span>
+<span class="cstat-no" title="statement not covered" >	parsed = parseConstructorArguments({</span>
 	    'argv': args,
 	    'strict': false
 	});
@@ -1214,10 +1216,10 @@ VError.MultiError = MultiError;
 	/*
 	 * If we've been given a name, apply it now.
 	 */
-<span class="cstat-no" title="statement not covered">	if (parsed.options.name) {</span>
-<span class="cstat-no" title="statement not covered">		mod_assertplus.string(parsed.options.name,</span>
+<span class="cstat-no" title="statement not covered" >	if (parsed.options.name) {</span>
+<span class="cstat-no" title="statement not covered" >		mod_assertplus.string(parsed.options.name,</span>
 		    'error\'s "name" must be a string');
-<span class="cstat-no" title="statement not covered">		this.name = parsed.options.name;</span>
+<span class="cstat-no" title="statement not covered" >		this.name = parsed.options.name;</span>
 	}
 &nbsp;
 	/*
@@ -1225,20 +1227,20 @@ VError.MultiError = MultiError;
 	 * this Error particularly) separately from the complete message (which
 	 * includes the messages of our cause chain).
 	 */
-<span class="cstat-no" title="statement not covered">	this.jse_shortmsg = parsed.shortmessage;</span>
-<span class="cstat-no" title="statement not covered">	message = parsed.shortmessage;</span>
+<span class="cstat-no" title="statement not covered" >	this.jse_shortmsg = parsed.shortmessage;</span>
+<span class="cstat-no" title="statement not covered" >	message = parsed.shortmessage;</span>
 &nbsp;
 	/*
 	 * If we've been given a cause, record a reference to it and update our
 	 * message appropriately.
 	 */
-<span class="cstat-no" title="statement not covered">	cause = parsed.options.cause;</span>
-<span class="cstat-no" title="statement not covered">	if (cause) {</span>
-<span class="cstat-no" title="statement not covered">		mod_assertplus.ok(mod_isError(cause), 'cause is not an Error');</span>
-<span class="cstat-no" title="statement not covered">		this.jse_cause = cause;</span>
+<span class="cstat-no" title="statement not covered" >	cause = parsed.options.cause;</span>
+<span class="cstat-no" title="statement not covered" >	if (cause) {</span>
+<span class="cstat-no" title="statement not covered" >		mod_assertplus.ok(mod_isError(cause), 'cause is not an Error');</span>
+<span class="cstat-no" title="statement not covered" >		this.jse_cause = cause;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">		if (!parsed.options.skipCauseMessage) {</span>
-<span class="cstat-no" title="statement not covered">			message += ': ' + cause.message;</span>
+<span class="cstat-no" title="statement not covered" >		if (!parsed.options.skipCauseMessage) {</span>
+<span class="cstat-no" title="statement not covered" >			message += ': ' + cause.message;</span>
 		}
 	}
 &nbsp;
@@ -1248,35 +1250,35 @@ VError.MultiError = MultiError;
 	 * objects here, but we don't want to use the original object in case
 	 * the caller modifies it later.
 	 */
-<span class="cstat-no" title="statement not covered">	this.jse_info = {};</span>
-<span class="cstat-no" title="statement not covered">	if (parsed.options.info) {</span>
-<span class="cstat-no" title="statement not covered">		for (k in parsed.options.info) {</span>
-<span class="cstat-no" title="statement not covered">			this.jse_info[k] = parsed.options.info[k];</span>
+<span class="cstat-no" title="statement not covered" >	this.jse_info = {};</span>
+<span class="cstat-no" title="statement not covered" >	if (parsed.options.info) {</span>
+<span class="cstat-no" title="statement not covered" >		for (k in parsed.options.info) {</span>
+<span class="cstat-no" title="statement not covered" >			this.jse_info[k] = parsed.options.info[k];</span>
 		}
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered">	this.message = message;</span>
-<span class="cstat-no" title="statement not covered">	Error.call(this, message);</span>
+<span class="cstat-no" title="statement not covered" >	this.message = message;</span>
+<span class="cstat-no" title="statement not covered" >	Error.call(this, message);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	if (Error.captureStackTrace) {</span>
-<span class="cstat-no" title="statement not covered">		ctor = parsed.options.constructorOpt || this.constructor;</span>
-<span class="cstat-no" title="statement not covered">		Error.captureStackTrace(this, ctor);</span>
+<span class="cstat-no" title="statement not covered" >	if (Error.captureStackTrace) {</span>
+<span class="cstat-no" title="statement not covered" >		ctor = parsed.options.constructorOpt || this.constructor;</span>
+<span class="cstat-no" title="statement not covered" >		Error.captureStackTrace(this, ctor);</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered">	return (this);</span>
+<span class="cstat-no" title="statement not covered" >	return (this);</span>
 }
 &nbsp;
 mod_util.inherits(VError, Error);
 VError.prototype.name = 'VError';
 &nbsp;
-VError.prototype.toString = <span class="fstat-no" title="function not covered">function ve_toString()</span>
+VError.prototype.toString = <span class="fstat-no" title="function not covered" >function ve_toString()</span>
 {
-<span class="cstat-no" title="statement not covered">	var str = (this.hasOwnProperty('name') &amp;&amp; this.name ||</span>
+<span class="cstat-no" title="statement not covered" >	var str = (this.hasOwnProperty('name') &amp;&amp; this.name ||</span>
 		this.constructor.name || this.constructor.prototype.name);
-<span class="cstat-no" title="statement not covered">	if (this.message)</span>
-<span class="cstat-no" title="statement not covered">		str += ': ' + this.message;</span>
+<span class="cstat-no" title="statement not covered" >	if (this.message)</span>
+<span class="cstat-no" title="statement not covered" >		str += ': ' + this.message;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	return (str);</span>
+<span class="cstat-no" title="statement not covered" >	return (str);</span>
 };
 &nbsp;
 /*
@@ -1284,10 +1286,10 @@ VError.prototype.toString = <span class="fstat-no" title="function not covered">
  * VError.cause() instead.  That method also uses the saner `null` return value
  * when there is no cause.
  */
-VError.prototype.cause = <span class="fstat-no" title="function not covered">function ve_cause()</span>
+VError.prototype.cause = <span class="fstat-no" title="function not covered" >function ve_cause()</span>
 {
-<span class="cstat-no" title="statement not covered">	var cause = VError.cause(this);</span>
-<span class="cstat-no" title="statement not covered">	return (cause === null ? undefined : cause);</span>
+<span class="cstat-no" title="statement not covered" >	var cause = VError.cause(this);</span>
+<span class="cstat-no" title="statement not covered" >	return (cause === null ? undefined : cause);</span>
 };
 &nbsp;
 /*
@@ -1299,67 +1301,67 @@ VError.prototype.cause = <span class="fstat-no" title="function not covered">fun
  * people fail to check whether the Error object has the corresponding methods.
  */
 &nbsp;
-VError.cause = <span class="fstat-no" title="function not covered">function (err)</span>
+VError.cause = <span class="fstat-no" title="function not covered" >function (err)</span>
 {
-<span class="cstat-no" title="statement not covered">	mod_assertplus.ok(mod_isError(err), 'err must be an Error');</span>
-<span class="cstat-no" title="statement not covered">	return (mod_isError(err.jse_cause) ? err.jse_cause : null);</span>
+<span class="cstat-no" title="statement not covered" >	mod_assertplus.ok(mod_isError(err), 'err must be an Error');</span>
+<span class="cstat-no" title="statement not covered" >	return (mod_isError(err.jse_cause) ? err.jse_cause : null);</span>
 };
 &nbsp;
-VError.info = <span class="fstat-no" title="function not covered">function (err)</span>
+VError.info = <span class="fstat-no" title="function not covered" >function (err)</span>
 {
-<span class="cstat-no" title="statement not covered">	var rv, cause, k;</span>
+<span class="cstat-no" title="statement not covered" >	var rv, cause, k;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	mod_assertplus.ok(mod_isError(err), 'err must be an Error');</span>
-<span class="cstat-no" title="statement not covered">	cause = VError.cause(err);</span>
-<span class="cstat-no" title="statement not covered">	if (cause !== null) {</span>
-<span class="cstat-no" title="statement not covered">		rv = VError.info(cause);</span>
+<span class="cstat-no" title="statement not covered" >	mod_assertplus.ok(mod_isError(err), 'err must be an Error');</span>
+<span class="cstat-no" title="statement not covered" >	cause = VError.cause(err);</span>
+<span class="cstat-no" title="statement not covered" >	if (cause !== null) {</span>
+<span class="cstat-no" title="statement not covered" >		rv = VError.info(cause);</span>
 	} else {
-<span class="cstat-no" title="statement not covered">		rv = {};</span>
+<span class="cstat-no" title="statement not covered" >		rv = {};</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered">	if (typeof (err.jse_info) == 'object' &amp;&amp; err.jse_info !== null) {</span>
-<span class="cstat-no" title="statement not covered">		for (k in err.jse_info) {</span>
-<span class="cstat-no" title="statement not covered">			rv[k] = err.jse_info[k];</span>
+<span class="cstat-no" title="statement not covered" >	if (typeof (err.jse_info) == 'object' &amp;&amp; err.jse_info !== null) {</span>
+<span class="cstat-no" title="statement not covered" >		for (k in err.jse_info) {</span>
+<span class="cstat-no" title="statement not covered" >			rv[k] = err.jse_info[k];</span>
 		}
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered">	return (rv);</span>
+<span class="cstat-no" title="statement not covered" >	return (rv);</span>
 };
 &nbsp;
-VError.findCauseByName = <span class="fstat-no" title="function not covered">function (err, name)</span>
+VError.findCauseByName = <span class="fstat-no" title="function not covered" >function (err, name)</span>
 {
-<span class="cstat-no" title="statement not covered">	var cause;</span>
+<span class="cstat-no" title="statement not covered" >	var cause;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	mod_assertplus.ok(mod_isError(err), 'err must be an Error');</span>
-<span class="cstat-no" title="statement not covered">	mod_assertplus.string(name, 'name');</span>
-<span class="cstat-no" title="statement not covered">	mod_assertplus.ok(name.length &gt; 0, 'name cannot be empty');</span>
+<span class="cstat-no" title="statement not covered" >	mod_assertplus.ok(mod_isError(err), 'err must be an Error');</span>
+<span class="cstat-no" title="statement not covered" >	mod_assertplus.string(name, 'name');</span>
+<span class="cstat-no" title="statement not covered" >	mod_assertplus.ok(name.length &gt; 0, 'name cannot be empty');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	for (cause = err; cause !== null; cause = VError.cause(cause)) {</span>
-<span class="cstat-no" title="statement not covered">		mod_assertplus.ok(mod_isError(cause));</span>
-<span class="cstat-no" title="statement not covered">		if (cause.name == name) {</span>
-<span class="cstat-no" title="statement not covered">			return (cause);</span>
+<span class="cstat-no" title="statement not covered" >	for (cause = err; cause !== null; cause = VError.cause(cause)) {</span>
+<span class="cstat-no" title="statement not covered" >		mod_assertplus.ok(mod_isError(cause));</span>
+<span class="cstat-no" title="statement not covered" >		if (cause.name == name) {</span>
+<span class="cstat-no" title="statement not covered" >			return (cause);</span>
 		}
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered">	return (null);</span>
+<span class="cstat-no" title="statement not covered" >	return (null);</span>
 };
 &nbsp;
-VError.hasCauseWithName = <span class="fstat-no" title="function not covered">function (err, name)</span>
+VError.hasCauseWithName = <span class="fstat-no" title="function not covered" >function (err, name)</span>
 {
-<span class="cstat-no" title="statement not covered">	return (VError.findCauseByName(err, name) !== null);</span>
+<span class="cstat-no" title="statement not covered" >	return (VError.findCauseByName(err, name) !== null);</span>
 };
 &nbsp;
-VError.fullStack = <span class="fstat-no" title="function not covered">function (err)</span>
+VError.fullStack = <span class="fstat-no" title="function not covered" >function (err)</span>
 {
-<span class="cstat-no" title="statement not covered">	mod_assertplus.ok(mod_isError(err), 'err must be an Error');</span>
+<span class="cstat-no" title="statement not covered" >	mod_assertplus.ok(mod_isError(err), 'err must be an Error');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	var cause = VError.cause(err);</span>
+<span class="cstat-no" title="statement not covered" >	var cause = VError.cause(err);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	if (cause) {</span>
-<span class="cstat-no" title="statement not covered">		return (err.stack + '\ncaused by: ' + VError.fullStack(cause));</span>
+<span class="cstat-no" title="statement not covered" >	if (cause) {</span>
+<span class="cstat-no" title="statement not covered" >		return (err.stack + '\ncaused by: ' + VError.fullStack(cause));</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered">	return (err.stack);</span>
+<span class="cstat-no" title="statement not covered" >	return (err.stack);</span>
 };
 &nbsp;
 &nbsp;
@@ -1367,26 +1369,26 @@ VError.fullStack = <span class="fstat-no" title="function not covered">function 
  * SError is like VError, but stricter about types.  You cannot pass "null" or
  * "undefined" as string arguments to the formatter.
  */
-<span class="fstat-no" title="function not covered">function SError()</span>
+<span class="fstat-no" title="function not covered" >function SError()</span>
 {
-<span class="cstat-no" title="statement not covered">	var args, obj, parsed, options;</span>
+<span class="cstat-no" title="statement not covered" >	var args, obj, parsed, options;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	args = Array.prototype.slice.call(arguments, 0);</span>
-<span class="cstat-no" title="statement not covered">	if (!(this instanceof SError)) {</span>
-<span class="cstat-no" title="statement not covered">		obj = Object.create(SError.prototype);</span>
-<span class="cstat-no" title="statement not covered">		SError.apply(obj, arguments);</span>
-<span class="cstat-no" title="statement not covered">		return (obj);</span>
+<span class="cstat-no" title="statement not covered" >	args = Array.prototype.slice.call(arguments, 0);</span>
+<span class="cstat-no" title="statement not covered" >	if (!(this instanceof SError)) {</span>
+<span class="cstat-no" title="statement not covered" >		obj = Object.create(SError.prototype);</span>
+<span class="cstat-no" title="statement not covered" >		SError.apply(obj, arguments);</span>
+<span class="cstat-no" title="statement not covered" >		return (obj);</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered">	parsed = parseConstructorArguments({</span>
+<span class="cstat-no" title="statement not covered" >	parsed = parseConstructorArguments({</span>
 	    'argv': args,
 	    'strict': true
 	});
 &nbsp;
-<span class="cstat-no" title="statement not covered">	options = parsed.options;</span>
-<span class="cstat-no" title="statement not covered">	VError.call(this, options, '%s', parsed.shortmessage);</span>
+<span class="cstat-no" title="statement not covered" >	options = parsed.options;</span>
+<span class="cstat-no" title="statement not covered" >	VError.call(this, options, '%s', parsed.shortmessage);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	return (this);</span>
+<span class="cstat-no" title="statement not covered" >	return (this);</span>
 }
 &nbsp;
 /*
@@ -1402,13 +1404,13 @@ mod_util.inherits(SError, VError);
  * contained in this object, but may also just treat it as a normal single
  * error, in which case a summary message will be printed.
  */
-<span class="fstat-no" title="function not covered">function MultiError(errors)</span>
+<span class="fstat-no" title="function not covered" >function MultiError(errors)</span>
 {
-<span class="cstat-no" title="statement not covered">	mod_assertplus.array(errors, 'list of errors');</span>
-<span class="cstat-no" title="statement not covered">	mod_assertplus.ok(errors.length &gt; 0, 'must be at least one error');</span>
-<span class="cstat-no" title="statement not covered">	this.ase_errors = errors;</span>
+<span class="cstat-no" title="statement not covered" >	mod_assertplus.array(errors, 'list of errors');</span>
+<span class="cstat-no" title="statement not covered" >	mod_assertplus.ok(errors.length &gt; 0, 'must be at least one error');</span>
+<span class="cstat-no" title="statement not covered" >	this.ase_errors = errors;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	VError.call(this, {</span>
+<span class="cstat-no" title="statement not covered" >	VError.call(this, {</span>
 	    'cause': errors[0]
 	}, 'first of %d error%s', errors.length, errors.length == 1 ? '' : 's');
 }
@@ -1416,71 +1418,70 @@ mod_util.inherits(SError, VError);
 mod_util.inherits(MultiError, VError);
 MultiError.prototype.name = 'MultiError';
 &nbsp;
-MultiError.prototype.errors = <span class="fstat-no" title="function not covered">function me_errors()</span>
+MultiError.prototype.errors = <span class="fstat-no" title="function not covered" >function me_errors()</span>
 {
-<span class="cstat-no" title="statement not covered">	return (this.ase_errors.slice(0));</span>
+<span class="cstat-no" title="statement not covered" >	return (this.ase_errors.slice(0));</span>
 };
 &nbsp;
 &nbsp;
 /*
  * See README.md for reference details.
  */
-<span class="fstat-no" title="function not covered">function WError()</span>
+<span class="fstat-no" title="function not covered" >function WError()</span>
 {
-<span class="cstat-no" title="statement not covered">	var args, obj, parsed, options;</span>
+<span class="cstat-no" title="statement not covered" >	var args, obj, parsed, options;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	args = Array.prototype.slice.call(arguments, 0);</span>
-<span class="cstat-no" title="statement not covered">	if (!(this instanceof WError)) {</span>
-<span class="cstat-no" title="statement not covered">		obj = Object.create(WError.prototype);</span>
-<span class="cstat-no" title="statement not covered">		WError.apply(obj, args);</span>
-<span class="cstat-no" title="statement not covered">		return (obj);</span>
+<span class="cstat-no" title="statement not covered" >	args = Array.prototype.slice.call(arguments, 0);</span>
+<span class="cstat-no" title="statement not covered" >	if (!(this instanceof WError)) {</span>
+<span class="cstat-no" title="statement not covered" >		obj = Object.create(WError.prototype);</span>
+<span class="cstat-no" title="statement not covered" >		WError.apply(obj, args);</span>
+<span class="cstat-no" title="statement not covered" >		return (obj);</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered">	parsed = parseConstructorArguments({</span>
+<span class="cstat-no" title="statement not covered" >	parsed = parseConstructorArguments({</span>
 	    'argv': args,
 	    'strict': false
 	});
 &nbsp;
-<span class="cstat-no" title="statement not covered">	options = parsed.options;</span>
-<span class="cstat-no" title="statement not covered">	options['skipCauseMessage'] = true;</span>
-<span class="cstat-no" title="statement not covered">	VError.call(this, options, '%s', parsed.shortmessage);</span>
+<span class="cstat-no" title="statement not covered" >	options = parsed.options;</span>
+<span class="cstat-no" title="statement not covered" >	options['skipCauseMessage'] = true;</span>
+<span class="cstat-no" title="statement not covered" >	VError.call(this, options, '%s', parsed.shortmessage);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	return (this);</span>
+<span class="cstat-no" title="statement not covered" >	return (this);</span>
 }
 &nbsp;
 mod_util.inherits(WError, VError);
 WError.prototype.name = 'WError';
 &nbsp;
-WError.prototype.toString = <span class="fstat-no" title="function not covered">function we_toString()</span>
+WError.prototype.toString = <span class="fstat-no" title="function not covered" >function we_toString()</span>
 {
-<span class="cstat-no" title="statement not covered">	var str = (this.hasOwnProperty('name') &amp;&amp; this.name ||</span>
+<span class="cstat-no" title="statement not covered" >	var str = (this.hasOwnProperty('name') &amp;&amp; this.name ||</span>
 		this.constructor.name || this.constructor.prototype.name);
-<span class="cstat-no" title="statement not covered">	if (this.message)</span>
-<span class="cstat-no" title="statement not covered">		str += ': ' + this.message;</span>
-<span class="cstat-no" title="statement not covered">	if (this.jse_cause &amp;&amp; this.jse_cause.message)</span>
-<span class="cstat-no" title="statement not covered">		str += '; caused by ' + this.jse_cause.toString();</span>
+<span class="cstat-no" title="statement not covered" >	if (this.message)</span>
+<span class="cstat-no" title="statement not covered" >		str += ': ' + this.message;</span>
+<span class="cstat-no" title="statement not covered" >	if (this.jse_cause &amp;&amp; this.jse_cause.message)</span>
+<span class="cstat-no" title="statement not covered" >		str += '; caused by ' + this.jse_cause.toString();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	return (str);</span>
+<span class="cstat-no" title="statement not covered" >	return (str);</span>
 };
 &nbsp;
 /*
  * For purely historical reasons, WError's cause() function allows you to set
  * the cause.
  */
-WError.prototype.cause = <span class="fstat-no" title="function not covered">function we_cause(c)</span>
+WError.prototype.cause = <span class="fstat-no" title="function not covered" >function we_cause(c)</span>
 {
-<span class="cstat-no" title="statement not covered">	if (mod_isError(c))</span>
-<span class="cstat-no" title="statement not covered">		this.jse_cause = c;</span>
+<span class="cstat-no" title="statement not covered" >	if (mod_isError(c))</span>
+<span class="cstat-no" title="statement not covered" >		this.jse_cause = c;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	return (this.jse_cause);</span>
+<span class="cstat-no" title="statement not covered" >	return (this.jse_cause);</span>
 };
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 15:37:26 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 19:57:43 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
